@@ -34,8 +34,10 @@ class SearchBar extends React.Component{
   render(){
     return (
       <div className="SearchBar">
+        <form onSubmit={this.search}>
         <input id="search-input" placeholder="Enter A Song, Album, or Artist" onChange={this.handleTermChange} onKeyDown={this.handleEnterKey} autoFocus/>
         <button id="search" onClick={this.search}>SEARCH</button>
+        </form>
       </div>
     );
   }

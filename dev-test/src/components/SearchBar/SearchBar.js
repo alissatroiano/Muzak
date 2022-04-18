@@ -32,27 +32,16 @@ class SearchBar extends React.Component{
   }
 
   render(){
-    const SearchBar = document.getElementById('SearchBar');
-    // const searchInput = document.getElementById('search-input');
-    // const searchButton = document.getElementById('search');
-
     return (
-      <div className="SearchBar" id='SearchBar'>
-        {SearchBar.classList.contains('SearchBar-active') ?
-          <input id="search-input" placeholder="Enter A Song, Album, or Artist" onChange={this.handleTermChange} onKeyDown={this.handleEnterKey} autoFocus/>
-          :
-          <input id="search-input" placeholder="Enter A Song, Album, or Artist" onChange={this.handleTermChange} onKeyDown={this.handleEnterKey} autoFocus/>
-        }
-        {SearchBar.classList.contains('SearchBar-active') ?
-          <button id="search" onClick={this.search}>SEARCH</button>
-          :
-          <button id="search" onClick={this.search}>SEARCH</button>
-        }
+      <div className="SearchBar">
+        <form onSubmit={this.search}>
+        <input id="search-input" placeholder="Enter A Song, Album, or Artist" onChange={this.handleTermChange} onKeyDown={this.handleEnterKey} autoFocus/>
+        <button id="search" onClick={this.search}>SEARCH</button>
+        </form>
       </div>
     );
   }
 }
-
 
 export default SearchBar;
 
