@@ -11,7 +11,7 @@ function getCss(imageurl) {
     backgroundSize: "cover",
     backgroundPosition: "center center",
     height: "180px",
-    position: "relative"
+    position: "relative",
   };
   return _styles;
 }
@@ -21,7 +21,8 @@ function constructVideoTitles(vidoesData, onVideoSelected) {
       <div
         className="video"
         key={index}
-        onClick={() => selectVideo(id, onVideoSelected)}>
+        onClick={() => selectVideo(id, onVideoSelected)}
+      >
         <div style={getCss(snippet.thumbnails.high.url)} key={index} />
         <p className="title">{snippet.title}</p>
       </div>

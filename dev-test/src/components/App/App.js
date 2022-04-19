@@ -37,24 +37,20 @@ export default class App extends React.Component {
     return (
       <>
         <nav className="py-2 bg-transparent mb-3 shadow-lg border-bottom">
-          <div className="container d-flex flex-wrap">
+          <div className="container d-flex flex-wrap my-3">
             <ul className="nav me-auto">
               <li className="nav-item">
-              <a
+                <a
                   href="index.html"
-                  className="nav-link link-dark px-2 active mx-auto"
+                  className="nav-link navbar-brand link-dark px-2 active mx-auto"
                   aria-current="page"
+                  id="home"
                 >
-                <i className="fas fa-music bi mx-2"></i> Earworm</a>
-               
-              </li>
-              <li className="nav-item">
-                <a href="www.google.com" className="nav-link link-dark px-2">
-                  About
+                  <i className="fas fa-worm bi mx-2"></i> Earworm
                 </a>
               </li>
             </ul>
-            <ul className="nav">
+            <ul className="nav ms-auto">
               <li className="nav-item">
                 <a href="#about" className="nav-link link-dark px-2">
                   <i className="fab fa-twitter"></i>
@@ -72,11 +68,6 @@ export default class App extends React.Component {
               </li>
               <li className="nav-item">
                 <a href="#about" className="nav-link link-dark px-2">
-                  <i className="fab fa-snapchat"></i>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#about" className="nav-link link-dark px-2">
                   <i className="fab fa-linkedin"></i>
                 </a>
               </li>
@@ -84,29 +75,70 @@ export default class App extends React.Component {
           </div>
         </nav>
         <header className="App-header">
-        <div className="container my-0 mx-auto px-3">
-          <div className="App p-3">
-            <div className="row">
-              <div className="col-12">
-                <Search onSearch={this.onSearch} />
-              </div>
-            </div>
-            </div>
-            </div>
-        </header>
-        <div className="container">
-            <div className="row d-flex justify-content-center">
-              <div className="col-12 col-md-8">
-                <VideoPlayer videoId={this.state.selectedVideoId} />
-              </div>
-              <div className="col-12 col-md-4">
-                <VideoList
-                  onVideoSelected={this.onVideoSelected}
-                  data={this.state.videosMetaInfo}
-                />
+          <div className="container my-0 mx-auto px-3">
+            <div className="App p-3">
+              <div className="row">
+                <div className="col-12">
+                  <Search onSearch={this.onSearch} />
+                </div>
               </div>
             </div>
           </div>
+        </header>
+        <div className="container-fluid video-section">
+          <div className="row d-flex justify-content-center">
+            <div className="col-12 col-md-8">
+              <VideoPlayer videoId={this.state.selectedVideoId} />
+            </div>
+            <div className="col-12 col-md-4">
+              <VideoList
+                onVideoSelected={this.onVideoSelected}
+                data={this.state.videosMetaInfo}
+              />
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <footer className="d-flex fixed-bottom flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div className="col-md-4 d-flex align-items-center" id="footer-text">
+              <span className="footer-lead ms-3 ms-md-5">© 2022 </span>
+              <i className="fas fa-worm mx-2"></i>
+              <span>Earworm</span>
+            </div>
+            <ul className="nav col-md-4 justify-content-end list-unstyled d-flex me-2 me-md-4">
+              <li className="ms-3">
+                <a
+                  className="text-muted"
+                  rel="noopener noreferrer"
+                  href="https://twitter.com/"
+                  target="_blank"
+                >
+                  <i className="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li className="ms-3">
+                <a
+                  className="text-muted"
+                  rel="noopener noreferrer"
+                  href="https://facebook.com/"
+                  target="_blank"
+                >
+                  <i className="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li className="ms-3">
+                <a
+                  className="text-muted"
+                  rel="noopener noreferrer"
+                  href="https://instagram.com/"
+                  target="_blank"
+                >
+                  <i className="fab fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </footer>
+        </div>
       </>
     );
   }

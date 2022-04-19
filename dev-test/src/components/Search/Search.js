@@ -1,5 +1,5 @@
 import React from "react";
-import './Search.css';
+import "./Search.css";
 // eslint-disable-next-line
 // import YouTube from "../../util/YouTube";
 
@@ -17,26 +17,33 @@ class Search extends React.Component {
   render() {
     return (
       <>
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="search">
-       <form className="d-flex search-form" onSubmit={this.onSubmit}>
-        <input 
-          className="form-control me-2" 
-          type="text" placeholder="Search" 
-          aria-label="Search"
-          id="video-search"
-          value={this.state.title}
-          onChange={this.onSearchChanged} 
-          />
-        
-          <button class="btn btn-outline-success" type="submit" id="search" onClick={this.search}>Search</button>
-      </form> 
-      </div>
-      </div>
-      </div>
-      </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="search">
+                <form className="d-flex search-form" onSubmit={this.onSubmit}>
+                  <input
+                    className="form-control me-2"
+                    type="text"
+                    placeholder="Search YouTube videos here..."
+                    aria-label="Search"
+                    id="video-search"
+                    value={this.state.title}
+                    onChange={this.onSearchChanged}
+                  />
+                  <button
+                    class="btn btn-outline-success"
+                    type="submit"
+                    id="search"
+                    onClick={this.search}
+                  >
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </>
     );
   }
