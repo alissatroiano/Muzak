@@ -1,9 +1,11 @@
+@import url("https://use.typekit.net/okm0fpl.css");
+
 .search-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 6.94rem;
-    margin-bottom: 6.33rem;
+    padding-top: 4.5rem;
+    margin-bottom: 2.5rem;
   }
   
   .search-form input {
@@ -25,47 +27,31 @@
     width: 8.11rem;
     padding: .77rem 0;
     border-radius: 54px;
-    background-color: rgba(119, 76, 195, 0.7);;
+    background-color: #4405af;
     border-style: hidden;
     text-align: center;
-    font-size: .833rem;
+    font-size: 1rem;
     -webkit-transition: background-color .25s;
     -o-transition: background-color .25s;
     transition: background-color .25s;
+    font-family: 'Futura-PT',sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
   }
   
   .search-form button:hover {
-    background-color: rgba(108, 65, 233, .7);
+    background-color: #631fd8a9;
   }
   
-  .SearchButton {
-    cursor: pointer;
-    width: 8.11rem;
-    padding: .77rem 0;
-    border-radius: 54px;
-    background-color: #010c3f;
-    text-align: center;
-    font-size: .833rem;
-    transition: background-color .25s;
-    border: 0px;
-    color: #fff;
-    font-weight: 500;
-  }
+  
   
   .SearchButton:hover {
-    background-color: rgba(108, 65, 233, .7);
-  }
+    background-color: #46a7acec;
+  }s
 
-
-.Search {
-    margin-top: 50px;
-    background-color: #282c349c;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.search {
+  width: 80%;
+  margin: 0 auto;
   }
   

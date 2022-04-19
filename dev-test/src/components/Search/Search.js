@@ -17,21 +17,26 @@ class Search extends React.Component {
   render() {
     return (
       <>
-
-       <form className="search-form" onSubmit={this.onSubmit}>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="search">
+       <form className="d-flex search-form" onSubmit={this.onSubmit}>
         <input 
           className="form-control me-2" 
-          type="text"
-           placeholder="Search" 
+          type="text" placeholder="Search" 
           aria-label="Search"
           id="video-search"
           value={this.state.title}
           onChange={this.onSearchChanged} 
           />
         
-          <button className="btn btn-outline-success" type="submit" id="video-search" onClick={this.search}>Search</button>
+          <button class="btn btn-outline-success" type="submit" id="search" onClick={this.search}>Search</button>
       </form> 
-
+      </div>
+      </div>
+      </div>
+      </div>
       </>
     );
   }
