@@ -25,6 +25,7 @@ function constructVideoTitles(vidoesData, onVideoSelected) {
       >
         <div style={getCss(snippet.thumbnails.high.url)} key={index} />
         <p className="title">{snippet.title}</p>
+        <p className="desc">{snippet.description}</p>
       </div>
     );
   });

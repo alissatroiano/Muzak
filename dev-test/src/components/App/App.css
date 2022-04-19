@@ -1,12 +1,14 @@
 @import url("https://use.typekit.net/okm0fpl.css");
 
 body {
-  min-height: 100vh;
   background: rgb(250,250,250);
-  background: radial-gradient(circle, rgba(250,250,250,1) 0%, rgba(251,200,231,1) 0%, rgba(251,202,232,1) 0%, rgba(250,250,250,1) 0%, rgba(251,200,231,1) 79%, rgba(250,250,250,1) 100%);
   background-size: cover;
   position: relative;
-  overflow: scroll;
+}
+
+#root {
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .App-link {
@@ -63,4 +65,32 @@ h2 {
 
 #footer-text {
   font-family: 'gravesend-sans', sans-serif;
+}
+
+.vid-container iframe,
+.vid-container object,
+.vid-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.vid-list {
+	width: fit-content;
+  height: auto;
+	position: relative;
+	top:0;
+	left: 0;
+}
+
+@media (min-width: 768px) {
+  .vid-container {
+    position: relative;
+    padding-bottom: 70%;
+    padding-top: 20px; 
+    height: 0;
+    overflow: scroll;
+  }
 }

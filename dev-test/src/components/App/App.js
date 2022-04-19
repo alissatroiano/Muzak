@@ -33,6 +33,10 @@ export default class App extends React.Component {
     console.log(this.state);
   };
 
+  onDisplayVideo = (videoId) => {
+    this.setState({ selectedVideoId: videoId });
+  };
+
   render() {
     return (
       <>
@@ -85,21 +89,23 @@ export default class App extends React.Component {
             </div>
           </div>
         </header>
-        <div className="container-fluid video-section">
+        <div className="container video-section">
           <div className="row d-flex justify-content-center">
             <div className="col-12 col-md-8">
               <VideoPlayer videoId={this.state.selectedVideoId} />
             </div>
-            <div className="col-12 col-md-4">
+            <div className="col-12 col-md-4 vid-container">
+              <div className="vid-list">
               <VideoList
                 onVideoSelected={this.onVideoSelected}
                 data={this.state.videosMetaInfo}
               />
+              </div>
             </div>
           </div>
         </div>
-        <div class="container">
-          <footer className="d-flex fixed-bottom flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="container d-block d-lg-block">
+          <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div className="col-md-4 d-flex align-items-center" id="footer-text">
               <span className="footer-lead ms-3 ms-md-5">© 2022 </span>
               <i className="fas fa-worm mx-2"></i>
