@@ -1,6 +1,5 @@
 import './App.css';
 import React from 'react';
-import SearchBar from '../SearchBar/SearchBar.js';
 // eslint-disable-next-line 
 import Search from '../Search/Search';
 // import SearchResults from '../SearchResults/SearchResults';
@@ -26,7 +25,7 @@ export default class App extends React.Component {
     return (
       <div className="App">
         <Search onSearch={this.onSearch} />
-        <SearchBar />
+        {/* <SearchBar /> */}
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React from "react";
+import './Search.css';
 // eslint-disable-next-line
 // import YouTube from "../../util/YouTube";
 
@@ -17,8 +18,7 @@ class Search extends React.Component {
     return (
       <>
         <form onSubmit={this.onSubmit} className="search-form">
-          <div className="form-control">
-            <label>Search</label>
+          <div className="Search fl-wrap">
             <input
               id="video-search"
               type="text"
@@ -26,6 +26,7 @@ class Search extends React.Component {
               onChange={this.onSearchChanged}
               placeholder="Enter Search Keyword"
             />
+            <button id="search" onClick={this.search}>SEARCH</button>
           </div>
         </form>
       </>
