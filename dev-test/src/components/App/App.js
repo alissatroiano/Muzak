@@ -29,6 +29,7 @@ export default class App extends React.Component {
       videosMetaInfo: response.data.items,
       selectedVideoId: response.data.items[0].id.videoId,
     });
+    console.log(this.state.videosMetaInfo);
   };
 
   onDisplayVideo = (videoId) => {
@@ -169,6 +170,6 @@ export default class App extends React.Component {
           </footer>
         </div>
       </>
-    );
+    ); 
   }
 }
