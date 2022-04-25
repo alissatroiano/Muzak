@@ -32,7 +32,7 @@ class Search extends React.Component {
                     onChange={this.onSearchChanged}
                   />
                   <button
-                    class="btn btn-outline-success"
+                    className="btn btn-outline-success"
                     type="submit"
                     id="search"
                     onClick={this.search}

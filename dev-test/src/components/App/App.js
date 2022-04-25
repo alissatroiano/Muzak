@@ -104,7 +104,7 @@ export default class App extends React.Component {
             </div>
           </div>
         </div>
-        <div class="container d-block d-lg-block">
+        <div className="container d-block d-lg-block">
           <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div className="col-md-4 d-flex align-items-center" id="footer-text">
               <span className="footer-lead ms-3 ms-md-5">© 2022 </span>
