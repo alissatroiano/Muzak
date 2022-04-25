@@ -15,8 +15,8 @@ function getCss(imageurl) {
   };
   return _styles;
 }
-function constructVideoTitles(vidoesData, onVideoSelected) {
-  return vidoesData.map(({ snippet, id }, index) => {
+function constructVideoTitles(videosData, onVideoSelected) {
+  return videosData.map(({ snippet, id }, index) => {
     return (
       <div
         className="video"

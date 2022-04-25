@@ -29,8 +29,6 @@ export default class App extends React.Component {
       videosMetaInfo: response.data.items,
       selectedVideoId: response.data.items[0].id.videoId,
     });
-
-    console.log(this.state);
   };
 
   onDisplayVideo = (videoId) => {
@@ -80,7 +78,7 @@ export default class App extends React.Component {
         </nav>
         <header className="App-header">
           <div className="container my-0 mx-auto px-3">
-            <div className="App p-3">
+            <div className="App">
               <div className="row">
                 <div className="col-12">
                   <Search onSearch={this.onSearch} />
@@ -93,20 +91,45 @@ export default class App extends React.Component {
           <div className="row d-flex justify-content-center">
             <div className="col-12 col-md-8">
               <VideoPlayer videoId={this.state.selectedVideoId} />
+              <div className="video-player-details">
+                <h3 className="video-title">
+                  {this.state.videosMetaInfo.map((video) => {
+                    if (video.id.videoId === this.state.selectedVideoId) {
+                      return video.snippet.title;
+                    } else {
+                      return null;
+                    }
+                  })}
+                </h3>
+                <h4>{this.selectedVideoId}</h4>
+                <p className="video-description">
+                  <span className="video-description-text"></span>
+                  {this.state.videosMetaInfo.map((video) => {
+                    if (video.id.videoId === this.state.selectedVideoId) {
+                      return video.snippet.description;
+                    } else {
+                      return null;
+                    }
+                  })}
+                </p>
+              </div>
             </div>
             <div className="col-12 col-md-4 vid-container">
               <div className="vid-list">
-              <VideoList
-                onVideoSelected={this.onVideoSelected}
-                data={this.state.videosMetaInfo}
-              />
+                <VideoList
+                  onVideoSelected={this.onVideoSelected}
+                  data={this.state.videosMetaInfo}
+                />
               </div>
             </div>
           </div>
         </div>
         <div className="container d-block d-lg-block">
           <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div className="col-md-4 d-flex align-items-center" id="footer-text">
+            <div
+              className="col-md-4 d-flex align-items-center"
+              id="footer-text"
+            >
               <span className="footer-lead ms-3 ms-md-5">© 2022 </span>
               <i className="fas fa-worm mx-2"></i>
               <span>Earworm</span>

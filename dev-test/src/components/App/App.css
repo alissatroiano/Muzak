@@ -17,7 +17,6 @@ body {
 
 h1 {
   text-align: center;
-  font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   color: #010c3f;
 }
@@ -27,8 +26,17 @@ h1 .highlight {
 }
 
 h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'gravesend-sans', sans-serif;
   font-size: 1.55rem;
+}
+
+.video-title {
+  font-family: 'gravesend-sans', sans-serif;
+}
+
+p.video-description {
+  font-family: 'Futura-PT', sans-serif;
+  font-size: 1.1rem;
 }
 
 .form-controls {
@@ -78,7 +86,7 @@ h2 {
 }
 
 .vid-list {
-	width: fit-content;
+	min-width: fit-content;
   height: auto;
 	position: relative;
 	top:0;
@@ -91,6 +99,6 @@ h2 {
     padding-bottom: 70%;
     padding-top: 20px; 
     height: 0;
-    overflow: scroll;
+    overflow: auto;
   }
 }
