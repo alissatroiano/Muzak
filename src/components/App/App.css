@@ -1,0 +1,104 @@
+@import url("https://use.typekit.net/okm0fpl.css");
+
+body {
+  background: rgb(250,250,250);
+  background-size: cover;
+  position: relative;
+}
+
+#root {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #010c3f;
+}
+
+h1 .highlight {
+  color: #6c41ec;
+}
+
+h2 {
+  font-family: 'gravesend-sans', sans-serif;
+  font-size: 1.55rem;
+}
+
+.video-title {
+  font-family: 'gravesend-sans', sans-serif;
+}
+
+p.video-description {
+  font-family: 'Futura-PT', sans-serif;
+  font-size: 1.1rem;
+}
+
+.form-controls {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-controls input[type="text"] {
+  display: flex;
+  border: 1px solid lightgray;
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-controls input[type="text"]:focus {
+  outline: none;
+  border-color: gray;
+  box-shadow: 0 2px 5px lightgray;
+}
+ 
+.form-controls label {
+  display: none;
+}
+
+.navbar-brand, #home {
+  font-family: 'gravesend-sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: .59px;
+}
+
+#footer-text {
+  font-family: 'gravesend-sans', sans-serif;
+}
+
+.vid-container iframe,
+.vid-container object,
+.vid-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.vid-list {
+	min-width: fit-content;
+  height: auto;
+	position: relative;
+	top:0;
+	left: 0;
+}
+
+@media (min-width: 768px) {
+  .vid-container {
+    position: relative;
+    padding-bottom: 70%;
+    padding-top: 20px; 
+    height: 0;
+    overflow: auto;
+  }
+}

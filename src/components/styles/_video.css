@@ -1,0 +1,35 @@
+
+.video {
+  box-shadow: 1px 1px 6px #666;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  margin: 20px 0;
+}
+
+
+.video-list {
+  border-left: 1px solid lightgray;
+  padding: 0 20px;
+  height: 100%;
+  overflow: auto;
+}
+ 
+.video-player .video-iframe {
+  width: 100%;
+  height: 450px;
+}
+
+.video > .title {
+  font-family: 'Futura-PT', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 5px;
+}
+
+.video > .desc {
+  font-family: 'Futura-PT', sans-serif;
+  padding: 5px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+}
