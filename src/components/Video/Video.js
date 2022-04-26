@@ -1,10 +1,10 @@
 import React from "react";
 import "../styles/_video.css";
-import "../styles/_video.css";
 
 function selectVideo(videoIdObj, onVideoSelected) {
   onVideoSelected(videoIdObj.videoId);
 }
+
 function getCss(imageurl) {
   const _styles = {
     backgroundImage: `url(${imageurl})`,
@@ -15,6 +15,7 @@ function getCss(imageurl) {
   };
   return _styles;
 }
+
 function constructVideoTitles(videosData, onVideoSelected) {
   return videosData.map(({ snippet, id }, index) => {
     return (
@@ -30,8 +31,10 @@ function constructVideoTitles(videosData, onVideoSelected) {
     );
   });
 }
+
 const Video = ({ data, onVideoSelected }) => {
-  return <>{constructVideoTitles(data, onVideoSelected)}</>;
+  return <>{constructVideoTitles(data, onVideoSelected)}
+  </>;
 };
 
 export default Video;

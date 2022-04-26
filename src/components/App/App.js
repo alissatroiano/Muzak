@@ -1,6 +1,5 @@
 import "./App.css";
 import React from "react";
-// eslint-disable-next-line
 import Search from "../Search/Search";
 import youtubeAPI from "../../util/YouTube";
 // eslint-disable-next-line
@@ -23,7 +22,7 @@ export default class App extends React.Component {
         q: keyword,
       },
     });
-    // console.log(response)
+    console.log(response)
 
     this.setState({
       videosMetaInfo: response.data.items,
@@ -40,7 +39,7 @@ export default class App extends React.Component {
     return (
       <>
         <nav className="py-2 bg-transparent mb-3 shadow-lg border-bottom">
-          <div className="container d-flex flex-wrap my-3">
+          <div className="container-fluid d-flex flex-wrap my-3">
             <ul className="nav me-auto">
               <li className="nav-item">
                 <a
@@ -49,7 +48,8 @@ export default class App extends React.Component {
                   aria-current="page"
                   id="home"
                 >
-                  <i className="fas fa-worm bi mx-2"></i> Earworm
+                  <i className="fas fa-headphones-simple bi mx-2"></i>
+                  Warble
                 </a>
               </li>
             </ul>
@@ -78,7 +78,7 @@ export default class App extends React.Component {
           </div>
         </nav>
         <header className="App-header">
-          <div className="container my-0 mx-auto px-3">
+          <div className="container-fluid my-0 mx-auto px-3">
             <div className="App">
               <div className="row">
                 <div className="col-12">
@@ -117,6 +117,10 @@ export default class App extends React.Component {
             </div>
             <div className="col-12 col-md-4 vid-container">
               <div className="vid-list">
+              <VideoList
+                onVideoSelected={this.onVideoSelected}
+                data={this.state.videosMetaInfo}
+              />
                 <VideoList
                   onVideoSelected={this.onVideoSelected}
                   data={this.state.videosMetaInfo}
@@ -129,11 +133,10 @@ export default class App extends React.Component {
           <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div
               className="col-md-4 d-flex align-items-center"
-              id="footer-text"
-            >
-              <span className="footer-lead ms-3 ms-md-5">© 2022 </span>
-              <i className="fas fa-worm mx-2"></i>
-              <span>Earworm</span>
+              id="footer-text">              
+              <i className="fas fa-headphones-simple mx-2"></i>
+              <span>Warble</span>
+              <span className="text-muted ms-1"> © 2022 </span>
             </div>
             <ul className="nav col-md-4 justify-content-end list-unstyled d-flex me-2 me-md-4">
               <li className="ms-3">
