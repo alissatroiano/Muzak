@@ -4,6 +4,7 @@ import "./Search.css";
 // import YouTube from "../../util/YouTube";
 
 class Search extends React.Component {
+  
   state = { title: "" };
   onSearchChanged = (event) => {
     const _title = event.target.value;

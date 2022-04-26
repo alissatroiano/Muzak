@@ -124,6 +124,8 @@ export default class App extends React.Component {
               </div>
             </div>
           </div>
+          <div className="row">
+          </div>
         </div>
         <div className="container-fluid d-block d-lg-block">
           <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
