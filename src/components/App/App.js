@@ -88,7 +88,7 @@ export default class App extends React.Component {
             </div>
           </div>
         </header>
-        <div className="container video-section">
+        <div className="container-fluid video-section">
           <div className="row d-flex justify-content-center">
             <div className="col-12 col-md-8">
               <VideoPlayer videoId={this.state.selectedVideoId} />
@@ -121,15 +121,11 @@ export default class App extends React.Component {
                 onVideoSelected={this.onVideoSelected}
                 data={this.state.videosMetaInfo}
               />
-                <VideoList
-                  onVideoSelected={this.onVideoSelected}
-                  data={this.state.videosMetaInfo}
-                />
               </div>
             </div>
           </div>
         </div>
-        <div className="container d-block d-lg-block">
+        <div className="container-fluid d-block d-lg-block">
           <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div
               className="col-md-4 d-flex align-items-center"
