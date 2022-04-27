@@ -20,21 +20,6 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <title>Warble</title>
-  <!--FileSaver.js-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <script>
-  var myBlob = new Blob(["Hello, world! Blob method working"], { type: "text/plain;charset=utf-8" });
-  // Create Download link for Blob
-  var url = window.URL.createObjectURL(myBlob);
-  var anchor = document.createElement("a");
-  anchor.href = url;
-  anchor.download = "demo.txt";
-  anchor.click();
-  
-  window.URL.revokeObjectURL(url);
-  document.body.appendChild(anchor);
-</script>
   </head>
 
   <body>
@@ -42,10 +27,6 @@
     <div id="root">
     </div>
   </body>
-
-  <!--Custom Script-->
-  <script src="assets/js/script.js"></script>
-  
   <!--Load Bootstrap Scripts-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
