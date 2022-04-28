@@ -2,9 +2,9 @@ import "./App.css";
 import React from "react";
 import Search from "../Search/Search";
 import youtubeAPI from "../../util/YouTube";
-// eslint-disable-next-line
 import VideoList from "../VideoList/VideoList";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
+
 
 export default class App extends React.Component {
   state = {
@@ -14,6 +14,11 @@ export default class App extends React.Component {
 
   onVideoSelected = (videoId) => {
     this.setState({ selectedVideoId: videoId });
+    this.useEffect(() => {
+      fetch("/api")
+        .then((res) => res.json())
+      //   .then((data) => setData(data.message));
+    }, []);  
   };
 
   onSearch = async (keyword) => {
@@ -32,6 +37,9 @@ export default class App extends React.Component {
   };
 
   onDisplayVideo = (videoId) => {
+    fetch("/api")
+      .then((res) => res.json())
+      .then(() => this.setState({ selectedVideoId: videoId }));
     this.setState({ selectedVideoId: videoId });
   };
 

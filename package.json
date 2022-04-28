@@ -4,7 +4,8 @@
   "description": "##",
   "main": "Logger.js",
   "scripts": {
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "build": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alissatroiano/Junior-Dev-Test/issues"
+  },
+  "engines": {
+    "node": "17.9.0"
   },
   "homepage": "https://github.com/alissatroiano/Junior-Dev-Test#readme",
   "dependencies": {
