@@ -32,12 +32,18 @@ You can also view it as a PDF [here](docs/wireframes/muzak-wireframe.pdf)
 ## Technologies
 
 - [React](https://reactjs.org/)
+- [Create React App](https://create-react-app.dev/)
+- [npx](https://npx.dev/)
+- [npm](https://www.npmjs.com/)
+- [Node.js](https://nodejs.org/)
 - [Bootstrap 5](https://getbootstrap.com/)
 - [HTML](https://www.w3.org/TR/html5/)
 - [CSS](https://www.w3.org/Style/)
 - [Git](https://git-scm.com/)
 - [GitHub](https://github.com/)
 - [Netlify](https://www.netlify.com/)
+- [Font Awesome](https://fontawesome.com/)
+- [Balsamiq](https://www.balsamiq.com/)
 
 ## Deployment
 
@@ -49,11 +55,25 @@ You can also view it as a PDF [here](docs/wireframes/muzak-wireframe.pdf)
 
 - [Youtube API](https://developers.google.com/youtube/v3/docs/videos/list) - Documentation used to obtain information about using the YouTube API
 
+- [Google Developer Console](https://console.developers.google.com) - The Google Developer Console was used to obtain the YouTube Data API key.
+
+- [Font Awesome](https://fontawesome.com/) - Font Awesome was used to create the icons used in the Muzak application.
+
+- [Adobe Fonts](https://fonts.adobe.com/) - Adobe Fonts was used to style the text content in the Muzak application.
+
 - [Boompositive](https://boompositive.com/blogs/positivethesaurus/synonyms-for-music-words) - Was used to brainstorm the app name, Muzak.
 
 - [HTML Standard](https://html.spec.whatwg.org/multipage/links.html#link-type-noopener) was used to obtain information about repairing security vulnerabilities in the `target=_blank` attribute.
 
 - The API Key was obtained from the Google Developers Console [Google Developers Console](https://console.developers.google.com/).
+
+- [Balsamiq](https://www.balsamiq.com/) was used to create the wireframes for the Muzak application.
+
+- [Netlify](https://www.netlify.com/) was used to deploy the Muzak application.
+
+- [NPM](https://www.npmjs.com/) was used to install dependencies and packages for the Muzak application.
+
+- [Create React App](https://create-react-app.dev/) was used to create the Muzak application.
 
 
 ## Acknowledgements
