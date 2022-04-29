@@ -14,6 +14,7 @@ export default class App extends React.Component {
 
   onVideoSelected = (videoId) => {
     this.setState({ selectedVideoId: videoId });
+    console.log(videoId);
   };
 
   onSearch = async (keyword) => {
@@ -22,13 +23,11 @@ export default class App extends React.Component {
         q: keyword,
       },
     });
-    console.log(response)
 
     this.setState({
       videosMetaInfo: response.data.items,
       selectedVideoId: response.data.items[0].id.videoId,
     });
-    console.log(this.state.videosMetaInfo);
   };
 
   onDisplayVideo = (videoId) => {
