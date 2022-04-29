@@ -43,6 +43,7 @@ You can also view it as a PDF [here](docs/wireframes/muzak-wireframe.pdf)
 - [GitHub](https://github.com/)
 - [Netlify](https://www.netlify.com/)
 - [Font Awesome](https://fontawesome.com/)
+- [Balsamiq](https://www.balsamiq.com/)
 
 ## Deployment
 
@@ -65,6 +66,14 @@ You can also view it as a PDF [here](docs/wireframes/muzak-wireframe.pdf)
 - [HTML Standard](https://html.spec.whatwg.org/multipage/links.html#link-type-noopener) was used to obtain information about repairing security vulnerabilities in the `target=_blank` attribute.
 
 - The API Key was obtained from the Google Developers Console [Google Developers Console](https://console.developers.google.com/).
+
+- [Balsamiq](https://www.balsamiq.com/) was used to create the wireframes for the Muzak application.
+
+- [Netlify](https://www.netlify.com/) was used to deploy the Muzak application.
+
+- [NPM](https://www.npmjs.com/) was used to install dependencies and packages for the Muzak application.
+
+- [Create React App](https://create-react-app.dev/) was used to create the Muzak application.
 
 
 ## Acknowledgements
