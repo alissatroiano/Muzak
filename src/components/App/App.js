@@ -50,7 +50,7 @@ export default class App extends React.Component {
                   id="home"
                 >
                   <i className="fas fa-headphones-simple bi mx-2"></i>
-                  Warble
+                  Muzak
                 </a>
               </li>
             </ul>
@@ -89,7 +89,7 @@ export default class App extends React.Component {
             </div>
           </div>
         </header>
-        <div className="container-fluid video-section">
+        <div className="container-fluid video-section p-3">
           <div className="row d-flex justify-content-center">
             <div className="col-12 col-md-8">
               <VideoPlayer videoId={this.state.selectedVideoId} />
@@ -133,7 +133,7 @@ export default class App extends React.Component {
               className="col-md-4 d-flex align-items-center"
               id="footer-text">              
               <i className="fas fa-headphones-simple mx-2"></i>
-              <span>Warble</span>
+              <span>Muzak</span>
               <span className="text-muted ms-1"> © 2022 </span>
             </div>
             <ul className="nav col-md-4 justify-content-end list-unstyled d-flex me-2 me-md-4">
