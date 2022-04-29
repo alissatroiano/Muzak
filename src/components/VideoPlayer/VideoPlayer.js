@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/_video.css";
-
  
 const VideoPlayer = ({ videoId }) => {
   if (!videoId) {

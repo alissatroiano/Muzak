@@ -1,0 +1,12 @@
+.navbar-brand,
+#home {
+  font-family: "gravesend-sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 0.59px;
+}
+
+.navbar-brand:hover,
+#home:hover {
+  color: #6c41ec;
+}
