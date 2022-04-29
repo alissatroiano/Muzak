@@ -6,6 +6,8 @@ import youtubeAPI from "../../util/YouTube";
 import VideoList from "../VideoList/VideoList";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
 
+console.log(process.env.REACT_APP_API_KEY)
+
 export default class App extends React.Component {
   state = {
     videosMetaInfo: [],
