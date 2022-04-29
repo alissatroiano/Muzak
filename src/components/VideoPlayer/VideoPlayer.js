@@ -8,8 +8,8 @@ const VideoPlayer = ({ videoId }) => {
     );
   }
   return (
-    <div className="video-player mt-5">
-    <div className="col-12 mt-5">
+    <div className="video-player my-3 my-md-5">
+    <div>
       <iframe
         title={videoId}
         className="video-iframe"

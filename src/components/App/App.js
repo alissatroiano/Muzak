@@ -35,6 +35,7 @@ export default class App extends React.Component {
 
   onDisplayVideo = (videoId) => {
     this.setState({ selectedVideoId: videoId });
+    console.log(videoId);
   };
 
   render() {
@@ -44,7 +45,7 @@ export default class App extends React.Component {
       <Navbar />
       </header>
         <Hero />
-        <div className="container-fluid my-0 mx-auto px-3">
+        <div className="container-fluid my-0 mx-auto">
           <div className="App">
             <div className="row">
               <div className="col-12">
