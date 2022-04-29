@@ -5,9 +5,7 @@ import "../styles/_video.css";
 const VideoPlayer = ({ videoId }) => {
   if (!videoId) {
     return (
-      <p style={{ textAlign: "center", fontSize: "18px", fontWeight: "bold" }}>
-        Search for a video
-      </p>
+      <div className="d-none"></div>
     );
   }
   return (
@@ -22,5 +20,5 @@ const VideoPlayer = ({ videoId }) => {
     </div>
   );
 };
- 
+
 export default VideoPlayer;

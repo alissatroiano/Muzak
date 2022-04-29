@@ -14,6 +14,7 @@ export default class App extends React.Component {
 
   onVideoSelected = (videoId) => {
     this.setState({ selectedVideoId: videoId });
+    console.log(videoId);
   };
 
   onSearch = async (keyword) => {
@@ -22,13 +23,11 @@ export default class App extends React.Component {
         q: keyword,
       },
     });
-    console.log(response)
 
     this.setState({
       videosMetaInfo: response.data.items,
       selectedVideoId: response.data.items[0].id.videoId,
     });
-    console.log(this.state.videosMetaInfo);
   };
 
   onDisplayVideo = (videoId) => {
@@ -49,7 +48,7 @@ export default class App extends React.Component {
                   id="home"
                 >
                   <i className="fas fa-headphones-simple bi mx-2"></i>
-                  Warble
+                  Muzak
                 </a>
               </li>
             </ul>
@@ -77,18 +76,17 @@ export default class App extends React.Component {
             </ul>
           </div>
         </nav>
-        <header className="App-header">
-          <div className="container-fluid my-0 mx-auto px-3">
-            <div className="App">
-              <div className="row">
-                <div className="col-12">
-                  <Search onSearch={this.onSearch} />
-                </div>
+
+        <div className="container-fluid my-0 mx-auto px-3">
+          <div className="App">
+            <div className="row">
+              <div className="col-12">
+                <Search onSearch={this.onSearch} />
               </div>
             </div>
           </div>
-        </header>
-        <div className="container-fluid video-section">
+        </div>
+        <div className="container-fluid video-section p-3 p-md-5">
           <div className="row d-flex justify-content-center">
             <div className="col-12 col-md-8">
               <VideoPlayer videoId={this.state.selectedVideoId} />
@@ -96,7 +94,9 @@ export default class App extends React.Component {
                 <h3 className="video-title">
                   {this.state.videosMetaInfo.map((video) => {
                     if (video.id.videoId === this.state.selectedVideoId) {
-                      return video.snippet.title;
+                      return (
+                        "ID #" + video.id.videoId + " - " + video.snippet.title
+                      );
                     } else {
                       return null;
                     }
@@ -117,23 +117,23 @@ export default class App extends React.Component {
             </div>
             <div className="col-12 col-md-4 vid-container">
               <div className="vid-list">
-              <VideoList
-                onVideoSelected={this.onVideoSelected}
-                data={this.state.videosMetaInfo}
-              />
+                <VideoList
+                  onVideoSelected={this.onVideoSelected}
+                  data={this.state.videosMetaInfo}
+                />
               </div>
             </div>
           </div>
-          <div className="row">
-          </div>
+          <div className="row"></div>
         </div>
         <div className="container-fluid d-block d-lg-block">
-          <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <footer className="d-none d-md-flex flex-wrap py-3 py-md-4 justify-content-between align-items-center border-top">
             <div
               className="col-md-4 d-flex align-items-center"
-              id="footer-text">              
+              id="footer-text"
+            >
               <i className="fas fa-headphones-simple mx-2"></i>
-              <span>Warble</span>
+              <span>Muzak</span>
               <span className="text-muted ms-1"> © 2022 </span>
             </div>
             <ul className="nav col-md-4 justify-content-end list-unstyled d-flex me-2 me-md-4">
@@ -171,6 +171,6 @@ export default class App extends React.Component {
           </footer>
         </div>
       </>
-    ); 
+    );
   }
 }
