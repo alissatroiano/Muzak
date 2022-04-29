@@ -12,7 +12,7 @@ const Footer = () => {
         <li className="ms-3">
           <a
             className="text-muted"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             href="https://youtube.com/"
             target="_blank"
           >
@@ -22,7 +22,7 @@ const Footer = () => {
         <li className="ms-3">
           <a
             className="text-muted"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             href="https://twitter.com/"
             target="_blank"
           >
@@ -32,7 +32,7 @@ const Footer = () => {
         <li className="ms-3">
           <a
             className="text-muted"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             href="https://facebook.com/"
             target="_blank"
           >

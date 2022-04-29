@@ -20,17 +20,17 @@ const Navbar = () => {
       </ul>
       <ul className="nav ms-auto">
       <li className="nav-item">
-        <a href="https://youtube.com/" target={'_blank'} className="nav-link link-dark px-2">
+        <a href="https://youtube.com/" target={'_blank'} rel="noreferrer" className="nav-link link-dark px-2">
             <i className="fab fa-youtube"></i>
           </a>
         </li>
         <li className="nav-item">
-          <a href="https://twitter.com/" target={'_blank'} className="nav-link link-dark px-2">
+          <a href="https://twitter.com/" target={'_blank'} rel="noreferrer" className="nav-link link-dark px-2">
             <i className="fab fa-twitter"></i>
           </a>
         </li>
         <li className="nav-item">
-        <a href="https://facebook.com/" target={'_blank'} className="nav-link link-dark px-2">
+        <a href="https://facebook.com/" target={'_blank'} rel="noreferrer" className="nav-link link-dark px-2">
             <i className="fab fa-facebook"></i>
           </a>
         </li>
