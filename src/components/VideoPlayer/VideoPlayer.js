@@ -20,5 +20,5 @@ const VideoPlayer = ({ videoId }) => {
     </div>
   );
 };
- 
+
 export default VideoPlayer;
