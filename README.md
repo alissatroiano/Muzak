@@ -14,7 +14,7 @@ Muzak is a simple video player that uses the YouTube Data API to fetch & stream 
 
 The following wireframe was created to guide this project:
 
-![Muzak Wireframe](docs/wireframes/muzak.png)
+![Muzak Wireframe](wireframes/muzak.png)
 
 ### Features
 
