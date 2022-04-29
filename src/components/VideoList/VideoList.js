@@ -11,10 +11,8 @@ const VideoList = ({ data, onVideoSelected }) => {
 
   return (
     <div className="video-list">
-    <div className="col-12 ">
       <div style={{ padding: "0 0" }}>
         <Video data={data} onVideoSelected={onVideoSelected} />
-      </div>
     </div>
     </div>
   );
