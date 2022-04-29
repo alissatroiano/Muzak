@@ -3,17 +3,43 @@ import "./Search.css";
 // eslint-disable-next-line
 // import YouTube from "../../util/YouTube";
 
-class Search extends React.Component {
-  
-  state = { title: "" };
+export default class  Search extends React.Component {
+  searchData;
+  constructor(props) {
+    super(props);
+    this.onSearchChanged = this.onSearchChanged.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+    this.state = {
+      value: '',
+    };
+  }
+
   onSearchChanged = (event) => {
     const _title = event.target.value;
     this.setState({ title: _title });
   };
+  
   onSubmit = (event) => {
     event.preventDefault();
     this.props.onSearch(this.state.title);
-  };
+    this.onSubmit.bind(this);
+    this.setState = {
+      title: '',
+    };
+  }
+
+  componentDidMount() {
+    this.searchData = JSON.parse(localStorage.getItem("search"));
+    if (localStorage.getItem("search")) {
+      this.setState({
+        videosMetaInfo: this.searchData,
+      });
+    }
+  }
+
+  componentDidUpdate(nextState) {
+    localStorage.setItem('search', JSON.stringify(nextState));
+}
 
   render() {
     return (
@@ -49,5 +75,3 @@ class Search extends React.Component {
     );
   }
 }
-
-export default Search;
