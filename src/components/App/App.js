@@ -97,13 +97,12 @@ export default class App extends React.Component {
                 <h3 className="video-title">
                   {this.state.videosMetaInfo.map((video) => {
                     if (video.id.videoId === this.state.selectedVideoId) {
-                      return video.snippet.title;
+                      return video.snippet.title + " - " + "ID: " + " " + video.id.videoId;
                     } else {
                       return null;
                     }
                   })}
                 </h3>
-                <h4>{this.selectedVideoId}</h4>
                 <p className="video-description">
                   <span className="video-description-text"></span>
                   {this.state.videosMetaInfo.map((video) => {
