@@ -5,6 +5,9 @@ import youtubeAPI from "../../util/YouTube";
 // eslint-disable-next-line
 import VideoList from "../VideoList/VideoList";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
+import Hero from "../Hero/Hero";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 export default class App extends React.Component {
   state = {
@@ -37,46 +40,10 @@ export default class App extends React.Component {
   render() {
     return (
       <>
-        <nav className="py-2 bg-transparent mb-3 shadow-lg border-bottom">
-          <div className="container-fluid d-flex flex-wrap my-3">
-            <ul className="nav me-auto">
-              <li className="nav-item">
-                <a
-                  href="index.html"
-                  className="nav-link navbar-brand link-dark px-2 active mx-auto"
-                  aria-current="page"
-                  id="home"
-                >
-                  <i className="fas fa-headphones-simple bi mx-2"></i>
-                  Muzak
-                </a>
-              </li>
-            </ul>
-            <ul className="nav ms-auto">
-              <li className="nav-item">
-                <a href="#about" className="nav-link link-dark px-2">
-                  <i className="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#about" className="nav-link link-dark px-2">
-                  <i className="fab fa-facebook"></i>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#about" className="nav-link link-dark px-2">
-                  <i className="fab fa-instagram"></i>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#about" className="nav-link link-dark px-2">
-                  <i className="fab fa-linkedin"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
+      <header>
+      <Navbar />
+      </header>
+        <Hero />
         <div className="container-fluid my-0 mx-auto px-3">
           <div className="App">
             <div className="row">
@@ -126,50 +93,7 @@ export default class App extends React.Component {
           </div>
           <div className="row"></div>
         </div>
-        <div className="container-fluid d-block d-lg-block">
-          <footer className="d-none d-md-flex flex-wrap py-3 py-md-4 justify-content-between align-items-center border-top">
-            <div
-              className="col-md-4 d-flex align-items-center"
-              id="footer-text"
-            >
-              <i className="fas fa-headphones-simple mx-2"></i>
-              <span>Muzak</span>
-              <span className="text-muted ms-1"> © 2022 </span>
-            </div>
-            <ul className="nav col-md-4 justify-content-end list-unstyled d-flex me-2 me-md-4">
-              <li className="ms-3">
-                <a
-                  className="text-muted"
-                  rel="noopener noreferrer"
-                  href="https://twitter.com/"
-                  target="_blank"
-                >
-                  <i className="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li className="ms-3">
-                <a
-                  className="text-muted"
-                  rel="noopener noreferrer"
-                  href="https://facebook.com/"
-                  target="_blank"
-                >
-                  <i className="fab fa-facebook"></i>
-                </a>
-              </li>
-              <li className="ms-3">
-                <a
-                  className="text-muted"
-                  rel="noopener noreferrer"
-                  href="https://instagram.com/"
-                  target="_blank"
-                >
-                  <i className="fab fa-instagram"></i>
-                </a>
-              </li>
-            </ul>
-          </footer>
-        </div>
+        <Footer />
       </>
     );
   }

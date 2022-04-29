@@ -1,9 +1,6 @@
 import React from "react";
-
 import Video from "../Video/Video";
-
 import "../styles/_video.css";
-
 
 const VideoList = ({ data, onVideoSelected }) => {
   if (!VideoList) {
