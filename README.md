@@ -8,7 +8,7 @@
 
 ## Description
 
-Muzak is a simple video player that uses the YouTube Data API to fetch & stream videos by video ID or title. Muzak was created for the [Blingby](https://blingby.com) Junior Developer programming test.
+Muzak is a simple video player that uses the YouTube Data API to fetch & stream videos by video ID or title. Muzak was built to demonstrate the developer's knowledge of the React framework, as well as the ability to fetch data to and from a given API. 
 
 ## Wireframes
 
